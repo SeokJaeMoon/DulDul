@@ -1,0 +1,187 @@
+/* 전체 기본 설정 및 폰트 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* 기존 연두색 계열에서 은은한 블루빛 연회색 배경으로 변경 */
+    color: #2d3748;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 상단 헤더 (블루 그라데이션 테마) */
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* 깊고 세련된 네이비-블루 그라데이션 */
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 네비게이션 바 */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 3px solid #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav span a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav span a:hover {
+    background-color: #2b6cb0; /* 호버 시 블루 포인트 색상 */
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* 본문 레이아웃 */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex: 1;
+    gap: 20px;
+}
+
+/* 인적사항 섹션 스타일 */
+.section1 {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    flex: 2;
+    min-width: 300px;
+    border-top: 5px solid #2b6cb0; /* 블루 계열 상단 테두리 */
+}
+
+.section1 h3 {
+    color: #1e3c72;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#pic1 {
+    width: 100%;
+    max-height: 250px;           /* 이미지 최대 높이 제한 */
+    object-fit: cover;           /* 비율을 유지하며 영역에 꽉 차게 조절 */
+    border-radius: 10px;         /* 모서리 둥글게 처리하여 깔끔함 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.section1 ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.section1 li {
+    padding: 6px 0;
+    font-size: 1.05rem;
+}
+
+/* 학력 테이블 스타일 */
+#year-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#year-table th {
+    background-color: #2b6cb0; /* 블루 계열 테이블 헤더 */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+#year-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+#year-table tr:hover {
+    background-color: #ebf8ff; /* 연한 블루빛 호버 효과 */
+}
+
+/* 로고 이미지 스타일 */
+#logo {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;           /* 찌그러짐 방지 */
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 3px solid #2b6cb0;   /* 블루 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 참고링크 사이드바 스타일 */
+aside {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    border-top: 5px solid #3182ce; /* 블루 계열 상단 테두리 */
+}
+
+aside h3 {
+    color: #1e3c72;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+aside .portal {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;           /* 포털 아이콘 비율 유지 */
+    border-radius: 50%;
+    margin: 8px;
+    border: 2px solid #cbd5e1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside .portal:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 4px 10px rgba(43, 108, 176, 0.3);
+    border-color: #2b6cb0;
+}
+
+/* 하단 푸터 */
+footer {
+    background-color: #1a202c; /* 다크 네이비 푸터 */
+    color: #a0aec0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
